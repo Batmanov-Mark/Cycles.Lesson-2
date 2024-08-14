@@ -7,7 +7,9 @@ public class Main {
         int salary = 15_000;
         int totalMoney = 0;
         int month = 0;
-        while (totalMoney <= 2_459_000) {
+        int initialDepositAmount = 2_459_000;
+        while (totalMoney <= initialDepositAmount) {
+            totalMoney *= 1.01;
             totalMoney = totalMoney + salary;
             ++month;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + totalMoney + " рублей");
@@ -15,12 +17,12 @@ public class Main {
 
         //Task 2
         System.out.println("Task 2");
-        int namber = 1;
+        int number = 1;
 
 
-        while (namber <= 10) {
-            System.out.print(namber + " ");
-            namber++;
+        while (number <= 10) {
+            System.out.print(number + " ");
+            number++;
         }
         System.out.println();
         for (int i = 10; i >= 1; i--) {
@@ -44,32 +46,30 @@ public class Main {
 
         //Task 4
         System.out.println("Task 4");
-        int Month = 0;
-        int initialDepositAmount = 15_000;
+        month = 0;
+        initialDepositAmount = 15_000;
         int finalDepositAmount = 12_000_000;
 
         while (initialDepositAmount <= finalDepositAmount) {
-            ++Month;
+            ++month;
             initialDepositAmount *= 1.07;
 
-            System.out.println("Месяц " + Month + " , сумма накоплений " + initialDepositAmount);
+            System.out.println("Месяц " + month + " , сумма накоплений " + initialDepositAmount);
 
         }
 
         //Task 5
         System.out.println("Task 5");
 
-        Month = 0;
+        month = 0;
         initialDepositAmount = 15_000;
         finalDepositAmount = 12_000_000;
-        for (int i = 1; i < 108; i++) {
 
-        }
         while (initialDepositAmount <= finalDepositAmount) {
-            ++Month;
+            ++month;
             initialDepositAmount *= 1.07;
-            if (Month % 6 == 0) {
-                System.out.println("Месяц " + Month + " , сумма накоплений " + initialDepositAmount);
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " , сумма накоплений " + initialDepositAmount);
             }
         }
 
